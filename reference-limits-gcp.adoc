@@ -1,0 +1,202 @@
+---
+sidebar: sidebar 
+permalink: reference-limits-gcp.html 
+keywords: limits, maximum, storage, aggregates, disks, volumes, capacity, luns, size, storage virtual machine, SVM 
+summary: Cloud Volumes ONTAP hat in Google Cloud Einschränkungen bei der Storage-Konfiguration, um einen zuverlässigen Betrieb zu gewährleisten. Konfigurieren Sie das System nicht mit den Maximalwerten, um eine optimale Performance zu erzielen. 
+---
+= Storage-Grenzen in Google Cloud
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Volumes ONTAP verfügt über Einschränkungen bei der Storage-Konfiguration, um einen zuverlässigen Betrieb zu gewährleisten. Konfigurieren Sie das System nicht mit den Maximalwerten, um eine optimale Performance zu erzielen.
+
+
+
+== Maximale Systemkapazität nach Lizenz
+
+Die maximale Systemkapazität eines Cloud Volumes ONTAP-Systems wird durch seine Lizenz bestimmt. Die maximale Systemkapazität umfasst festplattenbasierten Storage sowie Objekt-Storage für Daten-Tiering.
+
+NetApp unterstützt nicht das Überschreiten der Kapazitätsgrenze des Systems. Wenn Sie die lizenzierte Kapazitätsgrenze erreichen, zeigt Cloud Manager eine Aktion erforderliche Meldung an, sodass Sie keine weiteren Festplatten hinzufügen können.
+
+Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. Sie können die Kapazitätsgrenze um erreichen https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. Weitere Details finden Sie in den Festplattenlimits unten.
+
+[cols="25,75"]
+|===
+| Lizenz | Maximale Systemkapazität (Festplatten + Objekt-Storage) 
+
+
+| Freimium | 500 GB 
+
+
+| PAYGO Explore | 2 TB (Daten-Tiering wird nicht mit Explore unterstützt) 
+
+
+| PAYGO-Standard | 10 TB 
+
+
+| PAYGO Premium | 368 TB 
+
+
+| Node-basierte Lizenz | 368 TB pro Lizenz 
+
+
+| Kapazitätsbasierte Lizenz | 2 PiB 
+|===
+Das Kapazitätslimit liegt für das gesamte HA-Paar. Er erfolgt nicht pro Node. Wenn Sie beispielsweise die Premium-Lizenz verwenden, können Sie bis zu 368 TB Kapazität zwischen beiden Nodes haben.
+
+Nein, das tut es nicht. Die Daten in einem HA-Paar werden zwischen den Nodes synchron gespiegelt, sodass sie bei einem Ausfall in Google Cloud verfügbar sind. Wenn Sie beispielsweise eine Festplatte mit 8 TB an Node A erwerben, weist Cloud Manager auf Node B auch eine Festplatte mit 8 TB zu, die für gespiegelte Daten verwendet wird. Während 16 TB Kapazität bereitgestellt wurde, zählt nur 8 TB für das Lizenzlimit.
+
+
+
+== Grenzwerte für Festplatte und Tiering
+
+Die folgende Tabelle zeigt die maximale Systemkapazität mit Festplatten allein, mit Festplatten und selten benötigten Daten-Tiering in den Objekt-Storage. Die Festplattenbeschränkungen gelten für Festplatten, die Benutzerdaten enthalten. Die Grenzen beinhalten nicht die Boot-Festplatte und Root-Festplatte.
+
+[cols="60,40"]
+|===
+| Parameter | Grenze 
+
+
+| Maximale Anzahl Festplatten  a| 
+* 124 für Single Node-Systeme
+* 123 pro Node für HA-Paare
+
+
+
+
+| Maximale Festplattengröße | 64 TB 
+
+
+| Maximale Systemkapazität mit Festplatten allein | 256 TB ^1^ 
+
+
+| Maximale Systemkapazität mit Festplatten und kalten Daten-Tiering zu einem Google Cloud Storage Bucket | Abhängig von der Lizenz. Siehe Tabelle oben. 
+|===
+^1^ Diese Grenze wird durch Virtual Machine-Limits in Google Cloud Platform definiert.
+
+
+
+== Aggregatgrenzen
+
+Cloud Volumes ONTAP gruppiert Festplatten der Google Cloud Platform in _Aggregate_. Aggregate stellen Storage auf Volumes zur Verfügung.
+
+[cols="2*"]
+|===
+| Parameter | Grenze 
+
+
+| Maximale Anzahl an Datenaggregaten ^1^  a| 
+* 99 für Single Node
+* 64 bei einem gesamten HA-Paar
+
+
+
+
+| Maximale Aggregatgröße | 256 TB Rohkapazität ^2^ 
+
+
+| Disks pro Aggregat | 1-6 ^3^ 
+
+
+| Maximale Anzahl von RAID-Gruppen pro Aggregat | 1 
+|===
+Hinweise:
+
+. Die maximale Anzahl von Datenaggregaten beinhaltet nicht das Root-Aggregat.
+. Die Kapazitätsgrenze für das Aggregat basiert auf den Festplatten, die das Aggregat umfassen. Die Obergrenze enthält keinen Objekt-Storage, der für Daten-Tiering verwendet wird.
+. Alle Festplatten in einem Aggregat müssen dieselbe Größe haben.
+
+
+
+
+== Logische Storage-Einschränkungen
+
+[cols="22,22,56"]
+|===
+| Logischer Storage | Parameter | Grenze 
+
+
+| *Storage Virtual Machines (SVMs)* | Maximale Anzahl für Cloud Volumes ONTAP (HA-Paar oder Single Node) | Eine Datenservice-SVM und eine Ziel-SVM für die Disaster Recovery verwendet. Sie können die Ziel-SVM für den Datenzugriff aktivieren, wenn ein Ausfall auf der Quell-SVM auftritt. ^1^ die einheitliche SVM für Daten umfasst das gesamte Cloud Volumes ONTAP System (HA-Paar oder ein Node). 
+
+
+.2+| *Dateien* | Maximale Größe | 16 TB 
+
+
+| Maximale Anzahl pro Volume | Volumengröße abhängig, bis zu 2 Milliarden 
+
+
+| *FlexClone Volumes* | Hierarchische Klontiefe ^2^ | 499 
+
+
+.3+| *FlexVol Volumes* | Maximal pro Node | 500 
+
+
+| Mindestgröße | 20 MB 
+
+
+| Maximale Größe | 100 TB 
+
+
+| *Qtrees* | Maximale Anzahl pro FlexVol Volume | 4,995 
+
+
+| *Snapshot Kopien* | Maximale Anzahl pro FlexVol Volume | 1,023 
+|===
+Hinweise:
+
+. Cloud Manager bietet keine Einrichtungs- oder Orchestrierungsunterstützung für SVM Disaster Recovery. Zudem werden für zusätzliche SVMs keine Storage-Aufgaben unterstützt. Sie müssen System Manager oder die CLI für die SVM-Disaster Recovery verwenden.
++
+** https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856["Express Guide zur Vorbereitung des SVM-Disaster Recovery"^]
+** https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857["SVM Disaster Recovery Express Guide"^]
+
+
+. Diese hierarchische Klontiefe ist die maximale Tiefe einer geschachtelten Hierarchie der FlexClone Volumes, die aus einem einzelnen FlexVol Volume erstellt werden kann.
+
+
+
+
+== ISCSI-Storage-Einschränkungen
+
+[cols="3*"]
+|===
+| ISCSI-Storage | Parameter | Grenze 
+
+
+.4+| *LUNs* | Maximal pro Node | 1,024 
+
+
+| Die maximale Anzahl der LUN-Zuordnungen | 1,024 
+
+
+| Maximale Größe | 16 TB 
+
+
+| Maximale Anzahl pro Volume | 512 
+
+
+| *Igroups* | Maximal pro Node | 256 
+
+
+.2+| *Initiatoren* | Maximal pro Node | 512 
+
+
+| Die maximale Anzahl pro Initiatorgruppe | 128 
+
+
+| *ISCSI-Sitzungen* | Maximal pro Node | 1,024 
+
+
+.2+| *LIFs* | Maximal pro Port | 1 
+
+
+| Maximal pro Portsatz | 32 
+
+
+| *Portsätze* | Maximal pro Node | 256 
+|===
