@@ -109,9 +109,9 @@ Der Cloud Volumes ONTAP 9.9.1 Release Candidate ist jetzt in AWS, Azure und Goog
 
 Zusätzlich zu den bereits mit eingeführten Funktionen https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["ONTAP 9.9.1"^], Diese Version von Cloud Volumes ONTAP enthält die folgenden:
 
-*  S3 support in Azure
-*  performance in AWS with high write speed
-*  boot disk in AWS
+* <<Unterstützung von ONTAP S3 in Azure>>
+* <<Verbesserte Performance in AWS mit hoher Schreibgeschwindigkeit>>
+* <<io2-Boot-Disk in AWS>>
 
 
 

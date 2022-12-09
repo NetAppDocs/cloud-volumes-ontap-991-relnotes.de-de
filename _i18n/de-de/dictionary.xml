@@ -20,7 +20,6 @@
   <block id="a5a1e4029969159a5f8fdeddd3fb7e1b" category="paragraph">Alle anderen Standorte, Versionen, Konfigurationen und Lizenzen werden nicht unterstützt.</block>
   <block id="38220a2514a2fcb218be440c035b4175" category="section-title">Cloud Volumes ONTAP unterstützt reservierte und On-Demand-VM-Instanzen</block>
   <block id="8ce602039d8c7d53c95e1f62b1d83ef0" category="paragraph">Cloud Volumes ONTAP kann auf einer reservierten oder On-Demand-VM-Instanz beim Cloud-Provider ausgeführt werden. Andere VM-Instanzen werden nicht unterstützt.</block>
-  <block id="207289e471510410b8d11da3001f65d7" category="section-title">Automatische Application Resource Management Lösungen sollten nicht verwendet werden</block>
   <block id="f9492a63b4f60679d003c1e9c0ebbb18" category="paragraph">Automatische Applikationsressourcenmanagement-Lösungen sollten die Cloud Volumes ONTAP-Systeme nicht verwalten. Dies kann zu einer Änderung an einer nicht unterstützten Konfiguration führen. Beispielsweise könnte mit der Lösung Cloud Volumes ONTAP zu einem nicht unterstützten VM-Instanztyp geändert werden.</block>
   <block id="1d7a5501cfb31aff808abb63ef9085c2" category="section-title">Software-Updates müssen von Cloud Manager abgeschlossen werden</block>
   <block id="93e3c3d0ea43d600b3c3cd4548ea3987" category="paragraph">Upgrades von Cloud Volumes ONTAP müssen von Cloud Manager abgeschlossen werden. Sie sollten kein Cloud Volumes ONTAP-Upgrade mit System Manager oder der CLI durchführen. Dies kann die Stabilität des Systems beeinträchtigen.</block>
@@ -377,9 +376,6 @@
   <block id="2d62580dcf116f839bad7027ac992878" category="list-text">NFSv4 wird nicht unterstützt. NFSv3 wird unterstützt.</block>
   <block id="b1969fa9ebe4dd2003618adb77082978" category="list-text">HA-Paare werden in einigen Regionen nicht unterstützt.</block>
   <block id="1538d38eb23a96781db500ec7bd30195" category="inline-link">Siehe die Liste der unterstützten Azure Regionen</block>
-  <block id="f5b8e6c4c4b082cf610f078e361a727f" category="paragraph"><block ref="1f129df010c594cb0d37bd30745a3820" category="inline-link-rx"></block>.</block>
-  <block id="e4f5b6f59db7bfa0e08c02262ddbd654" category="section-title">CSP-Partner erhalten keine Pay-as-you-go-Lösung</block>
-  <block id="f2ff5834d93c258f0fc4ad6cf6a17942" category="paragraph">Als Microsoft Cloud Solution Provider (CSP)-Partner können Sie Cloud Volumes ONTAP Explore, Standard oder Premium nicht bereitstellen, da CSP-Partner keine Pay-as-you-go-Abonnements haben. Kunden müssen eine Lizenz erwerben und Cloud Volumes ONTAP BYOL implementieren.</block>
   <block id="6a8a2e92f318dbd4f6a8e47b03350d4d" category="summary">Cloud Volumes ONTAP verfügt über Einschränkungen bei der Storage-Konfiguration in Azure, um einen zuverlässigen Betrieb zu gewährleisten. Konfigurieren Sie das System nicht mit den Maximalwerten, um eine optimale Performance zu erzielen.</block>
   <block id="e622ddac1a96836929babb5b993749ba" category="doc">Storage-Grenzen in Azure</block>
   <block id="e6607992aca7a2cd8b89f152b0cf553d" category="section-title">Festplatten- und Tiering-Größen werden nach VM-Größe begrenzt</block>
@@ -554,7 +550,6 @@
   <block id="b5050f17750ec84285bec219771841c4" category="section-title">Einschränkungen von Google Private Service Connect</block>
   <block id="9fb3c7aadbb59d428d3c01efb5689f4b" category="inline-link">Google Private Service Connect</block>
   <block id="7af98a0e0cd62cd4ddc103341d51fda2" category="inline-link">Cloud Manager API-Endpunkte</block>
-  <block id="948671a13623cbbc9f65ca511ed257a3" category="paragraph">Wenn Sie nutzen<block ref="e066b15eeebd4e6d571fd7dd588f94f7" category="inline-link-rx"></block> Innerhalb der VPC, in der Cloud Volumes ONTAP implementiert wird, müssen DNS-Datensätze implementiert werden, die den Datenverkehr an die erforderlich weiterleiten<block ref="acf94572d3bfe8bd5bc5166d196eeacc" category="inline-link-rx"></block>.</block>
   <block id="406156e49006d700786c581646d94504" category="paragraph">Das Tiering von Daten aus Cloud Volumes ONTAP in einen Google Cloud Storage Bucket wird derzeit mit Private Service Connect nicht unterstützt.</block>
   <block id="5520e32d61a58dff51fc6730939c3baf" category="summary">Cloud Volumes ONTAP hat in Google Cloud Einschränkungen bei der Storage-Konfiguration, um einen zuverlässigen Betrieb zu gewährleisten. Konfigurieren Sie das System nicht mit den Maximalwerten, um eine optimale Performance zu erzielen.</block>
   <block id="c73908091fadeb9dec16abab42821644" category="doc">Storage-Grenzen in Google Cloud</block>
@@ -672,4 +667,11 @@
   <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">Alle Dokumentationen zum Cloud Manager</block>
   <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="sidebar">Cloud Volumes ONTAP</block>
   <block id="dea335c9c6f638eb584011e253ad6ca1" category="sidebar">ONTAP Cloud</block>
+  <block id="2819feead2b07762a4465189ab8b2f52" category="paragraph-title">Gibt es bei einem HA-Paar das Limit für lizenzierte Kapazität pro Node oder für das gesamte HA-Paar?</block>
+  <block id="7093c2c9844cf46dcd5d50c6d596d244" category="paragraph-title">Werden bei einem HA-Paar die gespiegelten Daten an das lizenzierte Kapazitätslimit gezählt?</block>
+  <block id="dbe94f36417009d827f76ccf107bd90c" category="section-title">Es sollten keine automatischen Lösungen für die Verwaltung von Anwendungsressourcen verwendet werden</block>
+  <block id="2f9882645b2c32820ad085240bacb763" category="paragraph-title">Ist bei HA die Lizenzkapazitätsgrenze pro Node oder für das gesamte HA-Paar?</block>
+  <block id="da934d10ecc6d50a861d9470630d4989" category="paragraph">Wenn Sie nutzen<block ref="e066b15eeebd4e6d571fd7dd588f94f7" category="inline-link-rx"></block> Innerhalb der VPC, in der Cloud Volumes ONTAP implementiert wird, müssen DNS-Datensätze implementiert werden, die den Datenverkehr an die erforderlich weiterleiten<block ref="c291f5ab92cbab017e6f29ee8a0edb54" category="inline-link-rx"></block>.</block>
+  <block id="fc9a388cd18c69244f22554de6f0d544" category="paragraph-title">Werden bei einem HA-System in AWS die gespiegelten Daten mit dem Kapazitätslimit gezählt?</block>
+  <block id="1f129df010c594cb0d37bd30745a3820" category="paragraph"><block ref="1f129df010c594cb0d37bd30745a3820" category="inline-link-rx"></block></block>
 </blocks>

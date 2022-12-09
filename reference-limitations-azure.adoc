@@ -38,12 +38,6 @@ Die folgenden Einschränkungen betreffen Cloud Volumes ONTAP HA-Paare in Microso
 * NFSv4 wird nicht unterstützt. NFSv3 wird unterstützt.
 * HA-Paare werden in einigen Regionen nicht unterstützt.
 +
-https://cloud.netapp.com/cloud-volumes-global-regions["Siehe die Liste der unterstützten Azure Regionen"^].
+https://cloud.netapp.com/cloud-volumes-global-regions["Siehe die Liste der unterstützten Azure Regionen"^]
 
 
-
-
-
-== CSP-Partner erhalten keine Pay-as-you-go-Lösung
-
-Als Microsoft Cloud Solution Provider (CSP)-Partner können Sie Cloud Volumes ONTAP Explore, Standard oder Premium nicht bereitstellen, da CSP-Partner keine Pay-as-you-go-Abonnements haben. Kunden müssen eine Lizenz erwerben und Cloud Volumes ONTAP BYOL implementieren.
