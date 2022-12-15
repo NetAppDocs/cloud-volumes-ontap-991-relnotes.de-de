@@ -22,7 +22,7 @@ Cloud Volumes ONTAP verfügt über Einschränkungen bei der Storage-Konfiguratio
 
 Die maximale Systemkapazität eines Cloud Volumes ONTAP-Systems wird durch seine Lizenz bestimmt. Die maximale Systemkapazität umfasst festplattenbasierten Storage sowie Objekt-Storage für Daten-Tiering.
 
-NetApp unterstützt nicht das Überschreiten der Kapazitätsgrenze des Systems. Wenn Sie die lizenzierte Kapazitätsgrenze erreichen, zeigt Cloud Manager eine Aktion erforderliche Meldung an, sodass Sie keine weiteren Festplatten hinzufügen können.
+NetApp unterstützt nicht das Überschreiten der Kapazitätsgrenze des Systems. Wenn Sie die lizenzierte Kapazitätsgrenze erreichen, zeigt BlueXP eine Meldung mit der erforderlichen Aktion an, sodass Sie keine weiteren Festplatten hinzufügen können.
 
 [cols="25,75"]
 |===
@@ -385,7 +385,7 @@ Storage VMs, die Sie für die Disaster Recovery (DR) konfigurieren, erfordern ke
 |===
 Hinweise:
 
-. Cloud Manager bietet keine Einrichtungs- oder Orchestrierungsunterstützung für SVM Disaster Recovery. Zudem werden für zusätzliche SVMs keine Storage-Aufgaben unterstützt. Sie müssen System Manager oder die CLI für die SVM-Disaster Recovery verwenden.
+. BlueXP bietet keine Unterstützung für Einrichtung oder Orchestrierung für SVM Disaster Recovery. Zudem werden für zusätzliche SVMs keine Storage-Aufgaben unterstützt. Sie müssen System Manager oder die CLI für die SVM-Disaster Recovery verwenden.
 +
 ** https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856["Express Guide zur Vorbereitung des SVM-Disaster Recovery"^]
 ** https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857["SVM Disaster Recovery Express Guide"^]

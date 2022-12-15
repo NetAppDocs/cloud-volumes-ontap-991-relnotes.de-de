@@ -62,21 +62,21 @@ Automatische Applikationsressourcenmanagement-Lösungen sollten die Cloud Volume
 
 
 
-== Software-Updates müssen von Cloud Manager abgeschlossen werden
+== Software-Updates müssen von BlueXP abgeschlossen werden
 
-Upgrades von Cloud Volumes ONTAP müssen von Cloud Manager abgeschlossen werden. Sie sollten kein Cloud Volumes ONTAP-Upgrade mit System Manager oder der CLI durchführen. Dies kann die Stabilität des Systems beeinträchtigen.
+Upgrades von Cloud Volumes ONTAP müssen von BlueXP abgeschlossen werden. Sie sollten kein Cloud Volumes ONTAP-Upgrade mit System Manager oder der CLI durchführen. Dies kann die Stabilität des Systems beeinträchtigen.
 
 
 
 == Die Cloud Volumes ONTAP-Bereitstellung darf nicht von der Konsole Ihres Cloud-Providers geändert werden
 
-Änderungen an einer Cloud Volumes ONTAP Konfiguration aus der Konsole Ihres Cloud-Providers resultieren in einer nicht unterstützten Konfiguration. Alle Änderungen an den von Cloud Manager erstellten und gemanagten Cloud Volumes ONTAP Ressourcen können sich auf die Systemstabilität auswirken und das Management des Systems durch Cloud Manager vornehmen.
+Änderungen an einer Cloud Volumes ONTAP Konfiguration aus der Konsole Ihres Cloud-Providers resultieren in einer nicht unterstützten Konfiguration. Alle Änderungen an den Cloud Volumes ONTAP-Ressourcen, die BlueXP erstellt und verwaltet, können die Systemstabilität beeinträchtigen und das System von BlueXP verwalten.
 
 
 
-== Festplatten und Aggregate müssen über Cloud Manager gemanagt werden
+== Festplatten und Aggregate müssen über BlueXP gemanagt werden
 
-Alle Festplatten und Aggregate müssen direkt aus Cloud Manager erstellt und gelöscht werden. Sie sollten diese Aktionen nicht über ein anderes Management-Tool ausführen. Dies kann sich auf die Systemstabilität auswirken, die Fähigkeit zum Hinzufügen von Festplatten in der Zukunft beeinträchtigen und möglicherweise Kosten für redundante Cloud-Provider verursachen.
+Alle Festplatten und Aggregate müssen direkt aus BlueXP erstellt und gelöscht werden. Sie sollten diese Aktionen nicht über ein anderes Management-Tool ausführen. Dies kann sich auf die Systemstabilität auswirken, die Fähigkeit zum Hinzufügen von Festplatten in der Zukunft beeinträchtigen und möglicherweise Kosten für redundante Cloud-Provider verursachen.
 
 
 

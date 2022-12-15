@@ -22,7 +22,7 @@ Cloud Volumes ONTAP verfügt über Einschränkungen bei der Storage-Konfiguratio
 
 Die maximale Systemkapazität eines Cloud Volumes ONTAP-Systems wird durch seine Lizenz bestimmt. Die maximale Systemkapazität umfasst festplattenbasierten Storage sowie Objekt-Storage für Daten-Tiering.
 
-NetApp unterstützt nicht das Überschreiten der Kapazitätsgrenze des Systems. Wenn Sie die lizenzierte Kapazitätsgrenze erreichen, zeigt Cloud Manager eine Aktion erforderliche Meldung an, sodass Sie keine weiteren Festplatten hinzufügen können.
+NetApp unterstützt nicht das Überschreiten der Kapazitätsgrenze des Systems. Wenn Sie die lizenzierte Kapazitätsgrenze erreichen, zeigt BlueXP eine Meldung mit der erforderlichen Aktion an, sodass Sie keine weiteren Festplatten hinzufügen können.
 
 Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. In solchen Fällen wird die Kapazitätsgrenze von erreicht https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. Weitere Details finden Sie unter Kapazitäts- und Festplattengrenzwerte unten.
 
@@ -52,7 +52,7 @@ Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durc
 Das Kapazitätslimit liegt für das gesamte HA-Paar. Er erfolgt nicht pro Node. Wenn Sie beispielsweise die Premium-Lizenz verwenden, können Sie bis zu 368 tib Kapazität zwischen beiden Nodes haben.
 
 .Werden bei einem HA-System in AWS die gespiegelten Daten mit dem Kapazitätslimit gezählt?
-Nein, das tut es nicht. Die Daten in einem AWS HA-Paar werden zwischen den Nodes synchron gespiegelt, sodass bei einem Ausfall die Daten verfügbar sind. Wenn Sie beispielsweise eine 8-tib-Festplatte auf Node A erwerben, weist Cloud Manager auf Node B auch eine 8-tib-Festplatte zu, die für gespiegelte Daten verwendet wird. Während 16 tib Kapazität bereitgestellt wurde, zählt nur 8 tib auf dem Lizenzlimit.
+Nein, das tut es nicht. Die Daten in einem AWS HA-Paar werden zwischen den Nodes synchron gespiegelt, sodass bei einem Ausfall die Daten verfügbar sind. Wenn Sie beispielsweise eine 8-tib-Festplatte auf Node A erwerben, weist BlueXP auf Node B auch eine 8-tib-Festplatte zu, die für gespiegelte Daten verwendet wird. Während 16 tib Kapazität bereitgestellt wurde, zählt nur 8 tib auf dem Lizenzlimit.
 
 
 
@@ -347,7 +347,7 @@ Die unten aufgeführten Instanzen gelten für die Familien c5, m5 und r5.
 | *.24xlarge | 50 | 44 | 24 | 12 
 |===
 . Diese Zahl gibt an, wie viele _verbleibende_ private IP-Adressen nach Implementierung und Einrichtung von Cloud Volumes ONTAP am Port e0a verfügbar sind. Ein *.2xlarge-System unterstützt beispielsweise maximal 15 IP-Adressen pro Netzwerkschnittstelle. Wird ein HA-Paar in einer einzelnen AZ implementiert, werden Port e0a 5 private IP-Adressen zugewiesen. Daher verbleiben bei einem HA-Paar, bei dem ein Instanztyp *.2xlarge verwendet wird, 10 private IP-Adressen für zusätzliche Storage VMs.
-. Die in diesen Spalten aufgeführten Nummer enthalten die erste Storage-VM, die Cloud Manager standardmäßig erstellt. Wenn beispielsweise in dieser Spalte 24 aufgeführt wird, bedeutet dies, dass Sie 23 zusätzliche Storage VMs für insgesamt 24 erstellen können.
+. Die in diesen Spalten aufgeführte Nummer enthält die erste Speicher-VM, die BlueXP standardmäßig erstellt. Wenn beispielsweise in dieser Spalte 24 aufgeführt wird, bedeutet dies, dass Sie 23 zusätzliche Storage VMs für insgesamt 24 erstellen können.
 . Ein Management-LIF für die Storage-VM ist optional. Ein Management-LIF bietet eine Verbindung zu Management-Tools wie SnapCenter.
 +
 Da zum einen eine private IP-Adresse erforderlich ist, wird die Anzahl der zusätzlichen, von Ihnen erstellten Storage VMs begrenzt. Die einzige Ausnahme ist ein HA-Paar in mehreren Verfügbarkeitszonen. In diesem Fall ist die IP-Adresse für die Management LIF eine _Floating_ IP-Adresse, somit wird sie nicht gegen die _private_ IP-Beschränkung angerechnet.
