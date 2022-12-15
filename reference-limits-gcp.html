@@ -184,6 +184,13 @@
     </li>
     <li>
       
+      <a href="https://docs.netapp.com/de-de/cloud-volumes-ontap-9120-relnotes/reference-limits-gcp.html" target="_self">
+        <span translate="no" class="notranslate"><span>Cloud Volumes ONTAP</span><span class="version"> 9.12.0</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
       <a href="https://docs.netapp.com/de-de/cloud-volumes-ontap-9111-relnotes/reference-limits-gcp.html" target="_self">
         <span translate="no" class="notranslate"><span>Cloud Volumes ONTAP</span><span class="version"> 9.11.1</span></span>
       </a>
@@ -768,7 +775,7 @@
 
         
         <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com/de-de/cloud-manager-family/">Cloud Manager</a>
+          <a href="https://docs.netapp.com/de-de/cloud-manager-family/">BlueXP</a>
         </li>
         
 
@@ -804,7 +811,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-12-09 16:32:43 +0000">12/09/2022</time>
+    <time datetime="2022-12-15 21:20:39 +0000">12/15/2022</time>
     
   
 
@@ -828,7 +835,7 @@
 <p>Die maximale Systemkapazität eines Cloud Volumes ONTAP-Systems wird durch seine Lizenz bestimmt. Die maximale Systemkapazität umfasst festplattenbasierten Storage sowie Objekt-Storage für Daten-Tiering.</p>
 </div>
 <div class="paragraph">
-<p>NetApp unterstützt nicht das Überschreiten der Kapazitätsgrenze des Systems. Wenn Sie die lizenzierte Kapazitätsgrenze erreichen, zeigt Cloud Manager eine Aktion erforderliche Meldung an, sodass Sie keine weiteren Festplatten hinzufügen können.</p>
+<p>NetApp unterstützt nicht das Überschreiten der Kapazitätsgrenze des Systems. Wenn Sie die lizenzierte Kapazitätsgrenze erreichen, zeigt BlueXP eine Meldung mit der erforderlichen Aktion an, sodass Sie keine weiteren Festplatten hinzufügen können.</p>
 </div>
 <div class="paragraph">
 <p>Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. Sie können die Kapazitätsgrenze um erreichen <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html" target="_blank" rel="noopener">"tiering inaktiver Daten in Objektspeicher"</a>. Weitere Details finden Sie in den Festplattenlimits unten.</p>
@@ -877,7 +884,7 @@
 </div>
 <div class="paragraph">
 <div class="title">Werden bei einem HA-Paar die gespiegelten Daten an das lizenzierte Kapazitätslimit gezählt?</div>
-<p>Nein, das tut es nicht. Die Daten in einem HA-Paar werden zwischen den Nodes synchron gespiegelt, sodass sie bei einem Ausfall in Google Cloud verfügbar sind. Wenn Sie beispielsweise eine Festplatte mit 8 TB an Node A erwerben, weist Cloud Manager auf Node B auch eine Festplatte mit 8 TB zu, die für gespiegelte Daten verwendet wird. Während 16 TB Kapazität bereitgestellt wurde, zählt nur 8 TB für das Lizenzlimit.</p>
+<p>Nein, das tut es nicht. Die Daten in einem HA-Paar werden zwischen den Nodes synchron gespiegelt, sodass sie bei einem Ausfall in Google Cloud verfügbar sind. Wenn Sie beispielsweise eine 8-TB-Festplatte auf Node A erwerben, weist BlueXP auf Node B auch eine 8-TB-Festplatte zu, die für gespiegelte Daten verwendet wird. Während 16 TB Kapazität bereitgestellt wurde, zählt nur 8 TB für das Lizenzlimit.</p>
 </div>
 </div>
 </div>
@@ -1061,7 +1068,7 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Cloud Manager bietet keine Einrichtungs- oder Orchestrierungsunterstützung für SVM Disaster Recovery. Zudem werden für zusätzliche SVMs keine Storage-Aufgaben unterstützt. Sie müssen System Manager oder die CLI für die SVM-Disaster Recovery verwenden.</p>
+<p>BlueXP bietet keine Unterstützung für Einrichtung oder Orchestrierung für SVM Disaster Recovery. Zudem werden für zusätzliche SVMs keine Storage-Aufgaben unterstützt. Sie müssen System Manager oder die CLI für die SVM-Disaster Recovery verwenden.</p>
 <div class="ulist">
 <ul>
 <li>
