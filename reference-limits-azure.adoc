@@ -62,7 +62,7 @@ Die folgenden Tabellen zeigen die maximale Systemkapazität nach VM-Größe mit 
 
 
 
-NOTE: Sie können mehrere Node-basierte Lizenzen für ein Cloud Volumes ONTAP BYOL-System erwerben, um mehr als 368 tib Kapazität zuzuweisen. Die Anzahl der Lizenzen, die Sie für ein Single Node-System oder ein HA-Paar erwerben können, ist unbegrenzt. Beachten Sie, dass die Festplattenbeschränkungen verhindern können, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. Sie können die Festplattengrenze um überschreiten https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html["Erfahren Sie, wie Sie Cloud Volumes ONTAP zusätzliche Systemlizenzen hinzufügen"^].
+NOTE: Sie können mehrere Node-basierte Lizenzen für ein Cloud Volumes ONTAP BYOL-System erwerben, um mehr als 368 tib Kapazität zuzuweisen. Die Anzahl der Lizenzen, die Sie für ein Single Node-System oder ein HA-Paar erwerben können, ist unbegrenzt. Beachten Sie, dass die Festplattenbeschränkungen verhindern können, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. Sie können die Festplattengrenze um überschreiten https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["Erfahren Sie, wie Sie Cloud Volumes ONTAP zusätzliche Systemlizenzen hinzufügen"^].
 
 
 
@@ -314,7 +314,7 @@ Bei einigen Konfigurationen können Sie zusätzliche Storage VMs (SVMs) für Clo
 
 Dies sind die getesteten Grenzwerte. Zusätzliche Storage VMs können theoretisch konfiguriert werden, werden aber nicht unterstützt.
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-azure.html["Erfahren Sie, wie Sie zusätzliche Storage VMs erstellen"^].
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-azure.html["Erfahren Sie, wie Sie zusätzliche Storage VMs erstellen"^].
 
 [cols="2*"]
 |===

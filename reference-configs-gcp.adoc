@@ -71,7 +71,7 @@ Ein Upgrade eines Single Node-Systems auf ein HA-Paar wird nicht unterstützt. W
 |===
 Hinweise:
 
-. Durch Festplattenbeschränkungen kann das Erreichen des maximalen Kapazitätsgrenzwerts verhindert werden, wenn Sie nur Festplatten verwenden. Sie können die Kapazitätsgrenze um erreichen https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^].
+. Durch Festplattenbeschränkungen kann das Erreichen des maximalen Kapazitätsgrenzwerts verhindert werden, wenn Sie nur Festplatten verwenden. Sie können die Kapazitätsgrenze um erreichen https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^].
 +
 link:reference-limits-gcp.html["Weitere Informationen zu Festplattenlimits finden Sie in Google Cloud"].
 

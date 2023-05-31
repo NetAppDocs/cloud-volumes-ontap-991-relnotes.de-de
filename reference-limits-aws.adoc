@@ -24,7 +24,7 @@ Die maximale Systemkapazität eines Cloud Volumes ONTAP-Systems wird durch seine
 
 NetApp unterstützt nicht das Überschreiten der Kapazitätsgrenze des Systems. Wenn Sie die lizenzierte Kapazitätsgrenze erreichen, zeigt BlueXP eine Meldung mit der erforderlichen Aktion an, sodass Sie keine weiteren Festplatten hinzufügen können.
 
-Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. In solchen Fällen wird die Kapazitätsgrenze von erreicht https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. Weitere Details finden Sie unter Kapazitäts- und Festplattengrenzwerte unten.
+Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. In solchen Fällen wird die Kapazitätsgrenze von erreicht https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. Weitere Details finden Sie unter Kapazitäts- und Festplattengrenzwerte unten.
 
 [cols="25,75"]
 |===
@@ -63,7 +63,7 @@ Cloud Volumes ONTAP verwendet EBS Volumes als Festplatten mit einer maximalen Fe
 Beachten Sie Folgendes:
 
 * Die unten aufgeführten Festplattengrenzwerte gelten für Festplatten, die Benutzerdaten enthalten. Die Grenzen beinhalten nicht die Boot-Festplatte und Root-Festplatte.
-* Kunden können jetzt mehrere Node-basierte Lizenzen für ein Cloud Volumes ONTAP BYOL-System erwerben und so mehr als 368 tib Kapazität zuweisen. Die Anzahl der Lizenzen, die Sie für ein Single Node-System oder ein HA-Paar erwerben können, ist unbegrenzt. Beachten Sie, dass die Festplattenbeschränkungen verhindern können, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. Sie können die Festplattengrenze um überschreiten https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html["Erfahren Sie, wie Sie Cloud Volumes ONTAP zusätzliche Systemlizenzen hinzufügen"^].
+* Kunden können jetzt mehrere Node-basierte Lizenzen für ein Cloud Volumes ONTAP BYOL-System erwerben und so mehr als 368 tib Kapazität zuweisen. Die Anzahl der Lizenzen, die Sie für ein Single Node-System oder ein HA-Paar erwerben können, ist unbegrenzt. Beachten Sie, dass die Festplattenbeschränkungen verhindern können, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. Sie können die Festplattengrenze um überschreiten https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["Erfahren Sie, wie Sie Cloud Volumes ONTAP zusätzliche Systemlizenzen hinzufügen"^].
 
 
 
@@ -213,7 +213,7 @@ Hinweise:
 
 Bei einigen Konfigurationen können Sie zusätzliche Storage VMs (SVMs) für Cloud Volumes ONTAP erstellen.
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-aws.html["Erfahren Sie, wie Sie zusätzliche Storage VMs erstellen"^].
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-aws.html["Erfahren Sie, wie Sie zusätzliche Storage VMs erstellen"^].
 
 [cols="40,60"]
 |===
