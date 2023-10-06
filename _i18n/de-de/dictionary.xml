@@ -101,7 +101,6 @@
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="cell"></block>
   <block id="bb49543449782c0f1b87b3ef8f49a6be" category="cell">*Festplatten allein*</block>
   <block id="e3185eb0708df4883935910ebf26f8db" category="cell">*Festplatten + Daten-Tiering*</block>
-  <block id="f94f9afeacfc431720c782db2e1d8809" category="cell">368 tib x jede Lizenz</block>
   <block id="918660df9dabb216873a828f8dba357f" category="section-title">Single Node mit kapazitätsbasierter Lizenzierung</block>
   <block id="3c59dc048e8850243be8079a5c74d079" category="cell">21</block>
   <block id="a23ca456fec74dd76d95b20f2cf60dd0" category="cell">19 ^1^</block>
@@ -518,7 +517,6 @@
   <block id="fb477a816dd39a57a35e342288ae601b" category="cell">Maximale Systemkapazität mit Festplatten und kalten Daten-Tiering zu einem Google Cloud Storage Bucket</block>
   <block id="1a731420bbc4adfcc3e3c640955180d2" category="cell">Abhängig von der Lizenz. Siehe Tabelle oben.</block>
   <block id="f001a5c220f0213e63339dfe3e66fb03" category="paragraph">^1^ Diese Grenze wird durch Virtual Machine-Limits in Google Cloud Platform definiert.</block>
-  <block id="c774172e35ab7294ce80989983a6d47e" category="paragraph">Cloud Volumes ONTAP gruppiert Festplatten der Google Cloud Platform in _Aggregate_. Aggregate stellen Storage auf Volumes zur Verfügung.</block>
   <block id="78c305f4cc241040025b8466926183c4" category="cell">Maximale Anzahl an Datenaggregaten ^1^</block>
   <block id="524fcd5d2110ab8c4e98150340c8319b" category="list-text">99 für Single Node</block>
   <block id="e60662dff3b10697270b44b2c551e944" category="list-text">64 bei einem gesamten HA-Paar</block>
@@ -527,7 +525,6 @@
   <block id="41a0b1e6c6d31716c7d7b603ce6a4936" category="section-title">Logische Storage-Einschränkungen</block>
   <block id="73a985be794327e4a037c64d0184774a" category="cell">*Storage Virtual Machines (SVMs)*</block>
   <block id="835d5536792339ec4a51105123601003" category="cell">Maximale Anzahl für Cloud Volumes ONTAP (HA-Paar oder Single Node)</block>
-  <block id="b2734f21c300d02359bdc60073cc3bc5" category="cell">Eine Datenservice-SVM und eine Ziel-SVM für die Disaster Recovery verwendet. Sie können die Ziel-SVM für den Datenzugriff aktivieren, wenn ein Ausfall auf der Quell-SVM auftritt. ^1^ die einheitliche SVM für Daten umfasst das gesamte Cloud Volumes ONTAP System (HA-Paar oder ein Node).</block>
   <block id="309524b9e1ef1d7d7d905c7cb1d358e9" category="cell">100 TB</block>
   <block id="b889869e31827a33530d6fd02141fdb5" category="summary">In Azure werden mehrere Cloud Volumes ONTAP Konfigurationen unterstützt.</block>
   <block id="e4b60b51b40a0907e38b3293d36780e6" category="doc">Unterstützte Konfigurationen in Azure</block>
@@ -645,7 +642,6 @@
   <block id="79d3c4941fdb49ae08cc30405f716cce" category="list-text">Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. In solchen Fällen wird die Kapazitätsgrenze von erreicht<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>. Weitere Informationen zu Festplattenlimits finden Sie unter <block ref="71ccaacc6f6c8feca068c7ff1a7b2eb5" category="inline-link-macro-rx"></block>.</block>
   <block id="9df4ca2adcfbf390d35edbeb52928a78" category="list-text">Einige Instanztypen sind lokaler NVMe-Storage, der Cloud Volumes ONTAP als _Flash Cache_ verwendet. Flash Cache beschleunigt den Zugriff auf Daten durch intelligente Cache-Speicherung von kürzlich gelesenen Anwenderdaten und NetApp Metadaten in Echtzeit. Es bringt Vorteile bei Random Read-intensiven Workloads, einschließlich Datenbanken, E-Mail und File Services. Um die Performance-Verbesserungen von Flash Cache nutzen zu können, muss die Komprimierung für alle Volumes deaktiviert sein.<block ref="da56a164195bbdee72f1dfc4ea53669d" category="inline-link-rx"></block>.</block>
   <block id="ce4956d12fe22f1b1243720ce22651e0" category="list-text">Cloud Volumes ONTAP unterstützt bei der Verwendung eines HA-Paars eine hohe Schreibgeschwindigkeit mit den meisten Instanztypen. Eine hohe Schreibgeschwindigkeit wird bei allen Instanztypen unterstützt, wenn ein System mit einem einzelnen Node verwendet wird.<block ref="721fe5ee3bbc3d8295d8615ed77ff9be" category="inline-link-rx"></block>.</block>
-  <block id="c00893a0ffabdcfdc5c2abd6001e5e33" category="admonition">Sie können mehrere Node-basierte Lizenzen für ein Cloud Volumes ONTAP BYOL-System erwerben, um mehr als 368 tib Kapazität zuzuweisen. Die Anzahl der Lizenzen, die Sie für ein Single Node-System oder ein HA-Paar erwerben können, ist unbegrenzt. Beachten Sie, dass die Festplattenbeschränkungen verhindern können, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. Sie können die Festplattengrenze um überschreiten<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>.<block ref="ca37ce4dde5616ef242d545490c7e6ee" category="inline-link-rx"></block>.</block>
   <block id="fc8746b925f8923889b77841242bf054" category="paragraph"><block ref="771bd01d5b66ba0bcb76d734267dc8bb" category="inline-link-rx"></block>.</block>
   <block id="ae90a2e4532cb9b615489b63c36e2383" category="paragraph"><block ref="dca5658ae26fff987979f5de0a83e9fd" category="inline-link-rx"></block>.</block>
   <block id="efb78221b5926bd89d824f8dec9a7ed2" category="list-text">Durch Festplattenbeschränkungen kann das Erreichen des maximalen Kapazitätsgrenzwerts verhindert werden, wenn Sie nur Festplatten verwenden. Sie können die Kapazitätsgrenze um erreichen<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>.</block>
@@ -653,7 +649,6 @@
   <block id="396e70da46ca6b8f2dd7d352ab5d7f16" category="paragraph">Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. Sie können die Kapazitätsgrenze um erreichen<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>. Weitere Details finden Sie in den Festplattenlimits unten.</block>
   <block id="e23e4dd8b34a9ee4e125975a6b71e9e6" category="paragraph"><block ref="5cefb3f020a9b716a037c381a6b28d4b" category="inline-link-rx"></block>.</block>
   <block id="a990fdc46668be8e7f963c8df127bbe8" category="paragraph">Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. In solchen Fällen wird die Kapazitätsgrenze von erreicht<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>. Weitere Details finden Sie unter Kapazitäts- und Festplattengrenzwerte unten.</block>
-  <block id="74620547288f003c63c99ad0bb05f8b6" category="list-text">Kunden können jetzt mehrere Node-basierte Lizenzen für ein Cloud Volumes ONTAP BYOL-System erwerben und so mehr als 368 tib Kapazität zuweisen. Die Anzahl der Lizenzen, die Sie für ein Single Node-System oder ein HA-Paar erwerben können, ist unbegrenzt. Beachten Sie, dass die Festplattenbeschränkungen verhindern können, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. Sie können die Festplattengrenze um überschreiten<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>.<block ref="ca37ce4dde5616ef242d545490c7e6ee" category="inline-link-rx"></block>.</block>
   <block id="c0ad13124302d4d047c0f916a6418182" category="paragraph"><block ref="cc3941262f254d1055804ecddca39dec" category="inline-link-rx"></block>.</block>
   <block id="4bdb15bfe1bad472d818dc31e8f53185" category="paragraph">Zusätzliche Funktionen und Erweiterungen sind ebenfalls in den neuesten Versionen von BlueXP verfügbar. Siehe<block ref="c7887e85c6060ae2594d873a0f2ae025" category="inline-link-rx"></block> Entsprechende Details.</block>
   <block id="34b2f4eab827285a262b1781e672e882" category="paragraph"><block ref="3f0e03f473a215943c109dc7746cdb60" category="inline-link-macro-rx"></block>.</block>
@@ -672,4 +667,11 @@
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="fd164e9cb2bc1ac5405cabfe451663f7" category="cell">2 PiB (erfordert mehrere Lizenzen)</block>
+  <block id="b3ffb91616ad248d4f6468f29260116d" category="paragraph">Cloud Volumes ONTAP gruppiert Google Cloud Festplatten zu _Aggregaten_. Aggregate stellen Storage auf Volumes zur Verfügung.</block>
+  <block id="e03f6b8b2723ce582552c447da083deb" category="cell">Eine Datenservice-SVM und eine Ziel-SVM für die Disaster Recovery verwendet. Sie können die Ziel-SVM für den Datenzugriff aktivieren, wenn ein Ausfall auf der Quell-SVM auftritt. ^1^
+
+Die eine Datenservice-SVM umfasst das gesamte Cloud Volumes ONTAP System (HA-Paar oder ein Node).</block>
+  <block id="2dbd9a217bce4c7ba4ef467f57d6875c" category="list-text">Sie können mehrere Node-basierte Lizenzen für ein Cloud Volumes ONTAP BYOL Single Node- oder HA-Paar-System erwerben, um mehr als 368 tib Kapazität zuzuweisen, bis zum maximal getesteten und unterstützten Systemkapazitätslimit von 2 PiB. Beachten Sie, dass die Festplattenbeschränkungen verhindern können, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. Sie können die Festplattengrenze um überschreiten<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>.<block ref="ca37ce4dde5616ef242d545490c7e6ee" category="inline-link-rx"></block>. Obwohl Cloud Volumes ONTAP eine bis zu der maximal getesteten und unterstützten Systemkapazität von 2 PiB unterstützt, führt das Überschreiten der Grenze von 2 PiB zu einer nicht unterstützten Systemkonfiguration.</block>
+  <block id="de9d6749570efc87e63811b5947fc250" category="list-text">AWS Secret Cloud und Top Secret Cloud-Regionen unterstützen ab Cloud Volumes ONTAP 9.12.1 den Erwerb mehrerer Node-basierter Lizenzen.</block>
 </blocks>
