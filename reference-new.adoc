@@ -20,16 +20,6 @@ Zusätzliche Funktionen und Erweiterungen sind ebenfalls in den neuesten Version
 
 
 
-== c4-, m4- und r4-Instanzen werden nicht mehr unterstützt (28. Oktober 2022)
-
-In AWS werden die Instanztypen c4, m4 und r4 EC2 nicht mehr mit Cloud Volumes ONTAP unterstützt. Wenn Sie bereits ein System besitzen, das auf einem Instanztyp c4, m4 oder r4 ausgeführt wird, müssen Sie in der instanzfamilie c5, m5 oder r5 auf einen Instanztyp wechseln.
-
-link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-change-ec2-instance.html["Erfahren Sie, wie Sie den EC2 Instanztyp für Cloud Volumes ONTAP ändern"^].
-
-Siehe link:https://mysupport.netapp.com/info/communications/ECMLP2880231.html["NetApp Support"^] Hier erhalten Sie weitere Informationen über das Ende der Verfügbarkeit und die Unterstützung dieser Instanztypen.
-
-
-
 == 9.9.1 P8 (15. Mai 2022)
 
 Der Patch 9.9.1 P8 ist nun für Cloud Volumes ONTAP in Microsoft Azure verfügbar, wenn Sie über einen Connector mit Version 3.9.13 oder höher verfügen. BlueXP fordert Sie auf, Ihre vorhandenen Systeme auf diese Patch-Version zu aktualisieren.
@@ -158,6 +148,14 @@ http://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-clou
 
 * Das Upgrade eines einzelnen Node-Systems nimmt das System für bis zu 25 Minuten offline, während dieser I/O-Unterbrechung erfolgt.
 * Das Upgrade eines HA-Paars erfolgt unterbrechungsfrei und die I/O wird unterbrochen. Während dieses unterbrechungsfreien Upgrade-Prozesses wird jeder Node entsprechend aktualisiert, um den I/O-Datenverkehr für die Clients weiterhin bereitzustellen.
+* In AWS werden die EC2-Instanztypen c4, m4 und R4 von neuen Cloud Volumes ONTAP-Implementierungen nicht mehr unterstützt. Wenn Sie ein System besitzen, das auf einem Instanztyp c4, m4 oder r4 ausgeführt wird, müssen Sie in der instanzfamilie c5, m5 oder r5 zu einem Instanztyp wechseln. Wenn Sie den Instanztyp nicht ändern können, müssen Sie vor dem Upgrade die erweiterte Netzwerkumgebung aktivieren.
++
+link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-cloud.html#upgrades-in-aws-with-c4-m4-and-r4-ec2-instance-types["Informieren Sie sich über das Upgrade in AWS mit den EC2-Instanztypen c4, m4 und R4^."]
+link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-change-ec2-instance.html["Erfahren Sie, wie Sie den EC2 Instanztyp für Cloud Volumes ONTAP ändern"^].
+
++
+Siehe link:https://mysupport.netapp.com/info/communications/ECMLP2880231.html["NetApp Support"^] Hier erhalten Sie weitere Informationen über das Ende der Verfügbarkeit und die Unterstützung dieser Instanztypen.
+
 
 
 
