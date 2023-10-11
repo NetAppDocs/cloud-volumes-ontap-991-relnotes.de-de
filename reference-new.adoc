@@ -150,7 +150,7 @@ http://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-clou
 * Das Upgrade eines HA-Paars erfolgt unterbrechungsfrei und die I/O wird unterbrochen. Während dieses unterbrechungsfreien Upgrade-Prozesses wird jeder Node entsprechend aktualisiert, um den I/O-Datenverkehr für die Clients weiterhin bereitzustellen.
 * In AWS werden die EC2-Instanztypen c4, m4 und R4 von neuen Cloud Volumes ONTAP-Implementierungen nicht mehr unterstützt. Wenn Sie ein System besitzen, das auf einem Instanztyp c4, m4 oder r4 ausgeführt wird, müssen Sie in der instanzfamilie c5, m5 oder r5 zu einem Instanztyp wechseln. Wenn Sie den Instanztyp nicht ändern können, müssen Sie vor dem Upgrade die erweiterte Netzwerkumgebung aktivieren.
 +
-link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-cloud.html#upgrades-in-aws-with-c4-m4-and-r4-ec2-instance-types["Informieren Sie sich über das Upgrade in AWS mit den EC2-Instanztypen c4, m4 und R4^."]
+link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-cloud.html#upgrades-in-aws-with-c4-m4-and-r4-ec2-instance-types["Erfahren Sie, wie Sie ein Upgrade in AWS mit EC2-Instanztypen c4, m4 und R4 durchführen"^].
 link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-change-ec2-instance.html["Erfahren Sie, wie Sie den EC2 Instanztyp für Cloud Volumes ONTAP ändern"^].
 
 +
