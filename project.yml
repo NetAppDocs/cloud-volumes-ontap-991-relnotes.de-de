@@ -1,6 +1,6 @@
 ---
 settings:
-  name: Cloud Volumes ONTAP release notes
+  name: Cloud Volumes ONTAP
   downlevel: true
   platform: cloud
   internal:
@@ -52,7 +52,7 @@ settings:
   langs: de-de,us-en,es-es,fr-fr,it-it,pt-br,ja-jp,ko-kr,zh-cn,zh-tw
 sidebar:
   entries:
-  - title: Versionshinweise zu Hause
+  - title: Versionshinweise zu Cloud Volumes ONTAP 9.9.1
     url: "/index.html"
   - title: Was ist neu
     url: "/reference-new.html"
