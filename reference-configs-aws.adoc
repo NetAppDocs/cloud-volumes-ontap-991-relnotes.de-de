@@ -201,4 +201,4 @@ Die in der nachstehenden Tabelle aufgeführten Bandbreiten entsprechen den dokum
 
 == Unterstützte Regionen
 
-Informationen zu regionalen Support für AWS finden Sie unter https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes Regionen Weltweit"^].
+Informationen zur Unterstützung der AWS Region finden Sie unter https://bluexp.netapp.com/cloud-volumes-global-regions["Cloud Volumes Regionen Weltweit"^].

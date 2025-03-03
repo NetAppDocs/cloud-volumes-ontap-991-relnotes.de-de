@@ -44,6 +44,6 @@ Die folgenden Einschränkungen betreffen Cloud Volumes ONTAP HA-Paare in Microso
 * NFSv4 wird nicht unterstützt. NFSv3 wird unterstützt.
 * HA-Paare werden in einigen Regionen nicht unterstützt.
 +
-https://cloud.netapp.com/cloud-volumes-global-regions["Siehe die Liste der unterstützten Azure Regionen"^]
+https://bluexp.netapp.com/cloud-volumes-global-regions["Siehe die Liste der unterstützten Azure Regionen"^]
 
 
